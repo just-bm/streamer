@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { UsersIcon } from "lucide-react";
 
 import { getUserFriends } from "../lib/api";
-import FriendCardDisplay from "../components/FriendCardForDisplay";
+import FriendCard from "../components/FriendCard";
 import NoFriendsFound from "../components/NoFriendsFound";
 
 const FriendsPage = () => {
@@ -64,7 +64,7 @@ const FriendsPage = () => {
         {!isLoading && !isError && friends.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {friends.map((friend) => (
-              <FriendCardDisplay key={friend._id} friend={friend} />
+              <FriendCard key={friend._id} friend={friend} />
             ))}
           </div>
         )}
