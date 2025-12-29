@@ -11,6 +11,7 @@ const FriendCard = ({ friend }) => {
             <img src={friend.profilePic} alt={friend.fullName} />
           </div>
           <h3 className="font-semibold truncate">{friend.fullName}</h3>
+          <h5 className="font-semibold truncate">{friend.bio}</h5>
         </div>
 
         <div className="flex flex-wrap gap-1.5 mb-3">
