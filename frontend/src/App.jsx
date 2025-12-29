@@ -107,7 +107,8 @@ const App = () => {
           path="/friends"
           element={
             isAuthenticated ? (
-                <Friends />
+              <Layout showSidebar={true}><Friends /></Layout>
+                
               ) : (
                 <Navigate to="/" />
               )
