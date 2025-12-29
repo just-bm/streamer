@@ -107,14 +107,10 @@ const App = () => {
           path="/friends"
           element={
             isAuthenticated ? (
-              !isOnboarded ? (
                 <Friends />
               ) : (
                 <Navigate to="/" />
               )
-            ) : (
-              <Navigate to="/login" />
-            )
           }
         />
       </Routes>
