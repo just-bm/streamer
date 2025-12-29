@@ -11,7 +11,12 @@ const FriendCard = ({ friend }) => {
             <img src={friend.profilePic} alt={friend.fullName} />
           </div>
           <h3 className="font-semibold truncate">{friend.fullName}</h3>
-          <h5 className="font-semibold truncate">{friend.bio}</h5>
+           {/* BIO */}
+        {friend.bio && (
+          <p className="text-sm opacity-70 leading-relaxed line-clamp-3">
+            {friend.bio}
+          </p>
+        )}
         </div>
 
         <div className="flex flex-wrap gap-1.5 mb-3">
