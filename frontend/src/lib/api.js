@@ -24,6 +24,11 @@ export const getAuthUser = async () => {
   }
 };
 
+export const updateProfile = async (data) => {
+  const res = await axiosInstance.put("/auth/edit", data);
+  return res.data;
+};
+
 export const completeOnboarding = async (userData) => {
   const response = await axiosInstance.post("/auth/onboarding", userData);
   return response.data;

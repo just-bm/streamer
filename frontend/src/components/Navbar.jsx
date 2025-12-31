@@ -43,12 +43,14 @@ const Navbar = () => {
 
           {/* TODO */}
           <ThemeSelector />
-
+          <Link to="/edit" className="block">
           <div className="avatar">
             <div className="w-9 rounded-full">
               <img src={authUser?.profilePic} alt="User Avatar" rel="noreferrer" />
             </div>
           </div>
+          </Link>
+          
 
           {/* Logout button */}
           <button className="btn btn-ghost btn-circle" onClick={logoutMutation}>

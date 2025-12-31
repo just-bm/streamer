@@ -15,6 +15,7 @@ import useAuthUser from "./hooks/useAuthUser.js";
 import Layout from "./components/Layout.jsx";
 import { useThemeStore } from "./store/useThemeStore.js";
 import Friends from "./pages/FriendsPage.jsx";
+import Edit from "./pages/Edit.jsx";
 
 const App = () => {
   const { isLoading, authUser } = useAuthUser();
@@ -102,7 +103,17 @@ const App = () => {
             )
           }
         />
-
+        <Route
+          path="/edit"
+          element={
+            isAuthenticated ? (
+              <Layout showSidebar={true}><Edit /></Layout>
+                
+              ) : (
+                <Navigate to="/" />
+              )
+          }
+        />
         <Route
           path="/friends"
           element={
